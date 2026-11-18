@@ -1,0 +1,10 @@
+level,pair,full_gap,judged
+c0,deepseek-exaone,-0.0156663,True
+c0,deepseek-haiku,-0.016956,True
+c0,exaone-haiku,-0.00128964,False
+L0,deepseek-exaone,0.0215399,True
+L0,deepseek-haiku,-0.0324726,True
+L0,exaone-haiku,-0.0540125,True
+L1,deepseek-exaone,0.0390657,True
+L1,deepseek-haiku,-0.000299369,False
+L1,exaone-haiku,-0.0393651,True

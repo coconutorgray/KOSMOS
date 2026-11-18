@@ -1,0 +1,63 @@
+{
+ "params": {
+  "ks": [
+   10,
+   20,
+   30,
+   40,
+   50
+  ],
+  "reps": 20,
+  "B": 15,
+  "m2_sub": 5,
+  "tol": 0.01,
+  "tol_strict": 0.005,
+  "p_target": 0.9,
+  "alpha": 1.0,
+  "k_full_model": {
+   "deepseek": 100.0,
+   "exaone": 98.0,
+   "haiku": 100.0
+  },
+  "cutoff": {
+   "M0": {
+    "tol_0.01": null,
+    "tol_0.005": null
+   },
+   "M1": {
+    "tol_0.01": 40,
+    "tol_0.005": null
+   },
+   "M2": {
+    "tol_0.01": 40,
+    "tol_0.005": null
+   }
+  },
+  "verdict": {
+   "H1_M1_cutoff": 40,
+   "H1_supported": false,
+   "H2_abs_bias_k30": {
+    "M0": 0.006393813907209104,
+    "M1": 0.0031269741256224853,
+    "M2": 0.0037319280787636282
+   },
+   "H2_supported": true
+  }
+ },
+ "tables": [
+  "full_data_tvd",
+  "reps",
+  "summary",
+  "worst_by_k"
+ ],
+ "notes": "",
+ "include_test": false,
+ "time": "2026-11-19T00:15:00",
+ "git_commit": "ca560a1",
+ "git_dirty": false,
+ "data_sha256": "eff54b43fe0cacc1",
+ "data_built_at": "2026-11-15T14:37:21",
+ "python": "3.12.7",
+ "pandas": "2.2.3",
+ "numpy": "2.2.6"
+}

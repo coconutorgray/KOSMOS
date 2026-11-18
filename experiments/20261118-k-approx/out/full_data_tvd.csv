@@ -1,0 +1,10 @@
+model,level,tvd_full
+deepseek,L0,0.260793
+deepseek,L1,0.285179
+deepseek,c0,0.282693
+exaone,L0,0.239253
+exaone,L1,0.246113
+exaone,c0,0.298359
+haiku,L0,0.293266
+haiku,L1,0.285478
+haiku,c0,0.299649

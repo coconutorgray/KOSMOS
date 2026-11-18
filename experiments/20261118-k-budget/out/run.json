@@ -1,0 +1,62 @@
+{
+ "params": {
+  "ks": [
+   5,
+   10,
+   15,
+   20,
+   30,
+   40,
+   50,
+   70
+  ],
+  "reps": 10,
+  "tol_tvd": 0.01,
+  "pass_reps": 9,
+  "tie": 0.005,
+  "fit_ks": [
+   5,
+   10,
+   15,
+   20,
+   30
+  ],
+  "tol_pred": 0.005,
+  "beta_full": {
+   "deepseek|c0": 0.32,
+   "deepseek|L0": 0.32,
+   "deepseek|L1": 0.31,
+   "exaone|c0": 0.32,
+   "exaone|L0": 0.36,
+   "exaone|L1": 0.37,
+   "haiku|c0": 0.24,
+   "haiku|L0": 0.25,
+   "haiku|L1": 0.25
+  },
+  "k_full": {
+   "deepseek": 100.0,
+   "exaone": 98.0,
+   "haiku": 100.0
+  },
+  "k_star": 50,
+  "alpha": 1.0
+ },
+ "tables": [
+  "full_data_tvd",
+  "h1_order_by_k",
+  "h1_tvd_by_k",
+  "h1_verdict_by_k",
+  "h2_extrapolation",
+  "reps"
+ ],
+ "notes": "",
+ "include_test": false,
+ "time": "2026-11-18T23:12:44",
+ "git_commit": "63db497",
+ "git_dirty": false,
+ "data_sha256": "eff54b43fe0cacc1",
+ "data_built_at": "2026-11-15T14:37:21",
+ "python": "3.12.7",
+ "pandas": "2.2.3",
+ "numpy": "2.2.6"
+}

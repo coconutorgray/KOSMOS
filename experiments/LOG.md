@@ -8,4 +8,4 @@
 | 2026-11-15 | [20261115-baseline-calibration](20261115-baseline-calibration/) | 태우 | 현재 데이터에서 3모델의 β*와 validation TVD 기준선은? | β* 재현 일치. 보정 후 L0·L1 EXAONE 최저(0.243/0.248) | 완료 |
 | 2026-11-15 | [20261115-baseline-calibration-k98](20261115-baseline-calibration-k98/) | 태우 | EXAONE k≈98로 늘린 DataFrame에서 3모델 β*와 validation TVD 기준선은 어떻게 바뀌는가? | EXAONE k 72→98에도 보정 후 TVD 변화 0.01 미만(L0 0.239, L1 0.246). DeepSeek·Haiku 재현 일치 | 완료 |
 | 2026-11-15 | [20261115-k-curve](20261115-k-curve/) | 태우 | 모델별로 프롬프트당 표본 수 k를 늘리면 보정 후 validation TVD가 얼마나 줄어드는가? | k 50→90 감소 모두 0.01 미만(EXAONE L0 0.008). Haiku는 k=5부터 평평, 모델 순서 불변 | 완료 |
-| 2026-11-18 | [20261118-k-budget](20261118-k-budget/) | 다교 | k=100 대신 몇 표본이면 보정 후 validation TVD와 모델 순서를 재현하고, 작은 k 결과로 k=100 값을 통계적으로 근사할 수 있는가? |  | 진행 |
+| 2026-11-18 | [20261118-k-budget](20261118-k-budget/) | 다교 | k=100 대신 몇 표본이면 보정 후 validation TVD와 모델 순서를 재현하고, 작은 k 결과로 k=100 값을 통계적으로 근사할 수 있는가? | k*=50(H1 기각, 순서만은 k=30이면 재현, Haiku는 k=5). c+a/√k 외삽은 9칸 중 6칸만 0.005 이내(H2 기각), k=30 그대로보다는 대체로 나음 | 완료 |

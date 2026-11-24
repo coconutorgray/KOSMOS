@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<title>KOSMOS 포스터</title>
+<meta name="viewport" content="width=2384">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{--ink:#13343B;--paper:#EEF2F1;--human:#E2553A;--text:#17262A;--muted:#5A6B70}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#EEF2F1}
+body{width:2384px;height:3370px;font-family:"Pretendard","Pretendard Variable",sans-serif;color:#17262A;word-break:keep-all;overflow-wrap:break-word;position:relative;overflow:hidden}
+.pp-img svg{display:block}
+/* 헤더 */
+#header{position:absolute;left:0;top:0;width:2384px;height:600px;background:#13343B}
+.eyebrow{position:absolute;left:96px;top:78px;width:1460px;font-size:30px;font-weight:700;color:#F2B544;letter-spacing:0}
+.title{position:absolute;left:96px;top:122px;width:1480px;font-size:104px;line-height:1.16;font-weight:900;color:#fff}
+.subtitle{position:absolute;left:96px;top:388px;width:1440px;font-size:36px;line-height:1.4;font-weight:500;color:#CFE0DE}
+.authors{position:absolute;left:96px;top:512px;width:1420px;font-size:30px;font-weight:600;color:#fff}
+.authors span{color:#F2B544}
+/* 헤더 오른쪽 개념도 */
+#concept{position:absolute;left:1600px;top:80px;width:690px;height:440px;background:#1E4A52;border-radius:28px}
+/* 핵심 숫자 */
+#stats{position:absolute;left:90px;top:640px;width:2204px;height:220px;display:flex;gap:36px}
+.stat{position:relative;flex:1;background:#fff;border-radius:24px;box-shadow:0 6px 18px rgba(19,52,59,.10)}
+.stat .big{position:absolute;left:36px;top:26px;width:470px;font-size:76px;line-height:1.1;font-weight:900;color:#13343B}
+.stat .big .h{color:#E2553A}
+.stat .cap{position:absolute;left:36px;top:124px;width:460px;font-size:25px;line-height:1.36;font-weight:500;color:#5A6B70}
+/* 단 */
+.col{position:absolute;top:900px;width:1072px}
+#colL{left:90px} #colR{left:1222px}
+.card{position:relative;background:#fff;border-radius:24px;box-shadow:0 6px 18px rgba(19,52,59,.10);padding:34px 40px 32px;margin-bottom:30px}
+.sec-head{position:relative;height:64px;margin-bottom:16px}
+.num{position:absolute;left:0;top:0;width:64px;height:64px;border-radius:50%;background:#13343B}
+.numtxt{position:absolute;left:0;top:12px;width:64px;text-align:center;font-size:32px;line-height:1.2;font-weight:900;color:#fff}
+.sec-title{position:absolute;left:86px;top:6px;width:880px;font-size:44px;line-height:1.2;font-weight:800;color:#13343B}
+.sec-sub{font-size:23px;line-height:1.4;color:#5A6B70;font-weight:500;margin:-4px 0 14px 86px}
+.body{font-size:27px;line-height:1.5;font-weight:500;color:#17262A}
+.hl{color:#E2553A;font-weight:800}
+.ink{color:#13343B;font-weight:800}
+.bl{position:relative;padding-left:36px;margin-top:14px}
+.dot{position:absolute;left:4px;top:15px;width:14px;height:14px;border-radius:50%}
+.bltxt{font-size:28px;line-height:1.5;font-weight:500}
+.icc{display:flex;align-items:center;justify-content:center;border-radius:50%;flex:none}
+.ctitle{font-size:28px;line-height:1.35;font-weight:800;color:#13343B;margin:6px 0 6px}
+.note{font-size:20px;line-height:1.4;color:#5A6B70;font-weight:500;margin-top:10px}
+.take{position:relative;background:#FBE3DC;border-radius:18px;padding:18px 24px;margin-top:16px}
+.take .t{font-size:25px;line-height:1.45;font-weight:600;color:#17262A}
+/* 질문 */
+.qrow{display:flex;gap:18px;align-items:flex-start;margin-top:12px}
+.qk{font-size:28px;font-weight:900;color:#E2553A;width:60px;flex:none;line-height:1.45}
+.qt{font-size:27px;line-height:1.45;font-weight:700;color:#17262A;flex:1}
+/* 방법 흐름 */
+.flow{display:flex;gap:14px;margin-top:6px}
+.step{position:relative;flex:1;background:#EEF2F1;border-radius:20px;padding:20px 18px 18px;height:316px}
+.step .stn{font-size:20px;font-weight:800;color:#E2553A;margin-top:12px}
+.step .stt{font-size:25px;line-height:1.3;font-weight:800;color:#13343B;margin-top:4px}
+.step .std{font-size:20px;line-height:1.38;color:#5A6B70;font-weight:500;margin-top:8px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.chip{background:#13343B;border-radius:30px;padding:8px 20px}
+.chip .ct{font-size:21px;font-weight:600;color:#fff;line-height:1.3;white-space:nowrap}
+.charth{font-size:25px;line-height:1.35;font-weight:800;color:#13343B;margin:14px 0 10px}
+.charth .u{font-size:20px;font-weight:500;color:#5A6B70}
+/* 추론 미니 차트 */
+.minis{display:flex;gap:20px}
+.mini{flex:1;background:#EEF2F1;border-radius:18px;padding:16px 14px 4px}
+.mini .mh{font-size:24px;line-height:1.3;font-weight:800;color:#13343B;text-align:center}
+.mini .ms{font-size:20px;line-height:1.3;font-weight:600;color:#5A6B70;text-align:center;margin-top:2px}
+/* 말투 결과 옆 숫자 */
+.split{display:flex;gap:26px;align-items:center;margin-top:10px}
+.bigbox{position:relative;width:250px;flex:none;background:#13343B;border-radius:20px;padding:20px 22px;height:190px}
+.bigbox .bn{font-size:58px;font-weight:900;color:#F2B544;line-height:1.1}
+.bigbox .bc{font-size:19px;line-height:1.38;color:#E4EEEC;font-weight:500;margin-top:6px}
+/* 하단 */
+#bottom{position:absolute;left:90px;top:2826px;width:2204px;height:412px;display:flex;gap:40px}
+#concl{position:relative;width:760px;background:#13343B;border-radius:24px;padding:34px 38px}
+#concl .sec-title{color:#fff}
+#concl .num{background:#E2553A}
+.cl{display:flex;gap:16px;margin-top:12px}
+.cln{font-size:27px;font-weight:900;color:#F2B544;width:40px;flex:none;line-height:1.4}
+.clt{font-size:25px;line-height:1.4;color:#fff;font-weight:500}
+.clt b{font-weight:800;color:#fff}
+#insight{position:relative;flex:1;background:#fff;border-radius:24px;box-shadow:0 6px 18px rgba(19,52,59,.10);padding:34px 38px}
+.igrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px 20px}
+.ins{position:relative;display:flex;gap:16px;align-items:flex-start;background:#EEF2F1;border-radius:18px;padding:16px 18px;height:132px}
+.ins .it{font-size:24px;line-height:1.3;font-weight:800;color:#13343B}
+.ins .id{font-size:19px;line-height:1.38;color:#5A6B70;font-weight:500;margin-top:6px}
+#footer{position:absolute;left:90px;top:3262px;width:2204px;height:80px}
+.ft{font-size:19px;line-height:1.45;color:#5A6B70;font-weight:500}
+.ft b{color:#13343B;font-weight:800}
+</style></head>
+<body>
+<div class="pp-box" id="header"></div>
+<div class="pp-text eyebrow">2026 캡스톤 디자인 · 팀 KOSMOS · 한국형 실리콘 샘플링 검증</div>
+<div class="pp-text title">LLM은 한국인처럼<br>답할 수 있을까?</div>
+<div class="pp-text subtitle">KGSS 2023 246문항으로 본 LLM 여론 재현: 한 보기로 쏠리고, 집단 차이를 부풀리며, 말투에 흔들린다</div>
+<div class="pp-text authors">[이름 · 소속 기입] &nbsp;<span>|</span>&nbsp; github.com/Great-Grace/KOSMOS</div>
+
+<div class="pp-box" id="concept"></div><div class="pp-text" style="position:absolute;left:1640px;top:100px;width:620px;font-size:24px;font-weight:700;color:#F2B544">같은 질문, 다른 분포 <span style="color:#9FBDB9;font-weight:500">(개념도)</span></div><div class="pp-box" style="position:absolute;left:1652px;top:368.25581395348837px;width:40px;height:31.744186046511633px;border-radius:6px 6px 0 0;background:#E2553A"></div><div class="pp-box" style="position:absolute;left:1704px;top:341.3953488372093px;width:40px;height:58.604651162790695px;border-radius:6px 6px 0 0;background:#E2553A"></div><div class="pp-box" style="position:absolute;left:1756px;top:326.74418604651163px;width:40px;height:73.25581395348837px;border-radius:6px 6px 0 0;background:#E2553A"></div><div class="pp-box" style="position:absolute;left:1808px;top:348.72093023255815px;width:40px;height:51.27906976744186px;border-radius:6px 6px 0 0;background:#E2553A"></div><div class="pp-box" style="position:absolute;left:1860px;top:370.69767441860466px;width:40px;height:29.302325581395348px;border-radius:6px 6px 0 0;background:#E2553A"></div><div class="pp-box" style="position:absolute;left:1646px;top:400px;width:260px;height:3px;background:#6E9894"></div><div class="pp-text" style="position:absolute;left:1646px;top:414px;width:300px;font-size:27px;font-weight:800;color:#fff">사람</div><div class="pp-text" style="position:absolute;left:1646px;top:450px;width:300px;font-size:20px;font-weight:500;color:#9FBDB9">의견이 고르게 갈린다</div><div class="pp-box" style="position:absolute;left:1972px;top:394px;width:40px;height:6px;border-radius:6px 6px 0 0;background:#7FD1C7"></div><div class="pp-box" style="position:absolute;left:2024px;top:387.7906976744186px;width:40px;height:12.209302325581397px;border-radius:6px 6px 0 0;background:#7FD1C7"></div><div class="pp-box" style="position:absolute;left:2076px;top:190px;width:40px;height:210px;border-radius:6px 6px 0 0;background:#7FD1C7"></div><div class="pp-box" style="position:absolute;left:2128px;top:387.7906976744186px;width:40px;height:12.209302325581397px;border-radius:6px 6px 0 0;background:#7FD1C7"></div><div class="pp-box" style="position:absolute;left:2180px;top:394px;width:40px;height:6px;border-radius:6px 6px 0 0;background:#7FD1C7"></div><div class="pp-box" style="position:absolute;left:1966px;top:400px;width:260px;height:3px;background:#6E9894"></div><div class="pp-text" style="position:absolute;left:1966px;top:414px;width:300px;font-size:27px;font-weight:800;color:#fff">LLM</div><div class="pp-text" style="position:absolute;left:1966px;top:450px;width:300px;font-size:20px;font-weight:500;color:#9FBDB9">한 보기로 몰린다</div>
+
+<div id="stats">
+  <div class="pp-box stat"><div class="pp-text big">0.22–0.28</div><div class="pp-text cap">보정한 뒤에도 남는 사람 분포와의 거리<br>(TVD, 성별×연령 10셀, 3모델)</div></div>
+  <div class="pp-box stat"><div class="pp-text big">0.81–0.93</div><div class="pp-text cap">가장 많이 고른 보기의 평균 비율<br>모델 3종 · <b style="color:#E2553A">사람은 0.52</b></div></div>
+  <div class="pp-box stat"><div class="pp-text big">1.7–3.3<span style="font-size:56px">배</span></div><div class="pp-text cap">성별×연령 페르소나를 줄 때 응답이<br>움직이는 폭, 사람 대비</div></div>
+  <div class="pp-box stat"><div class="pp-text big"><span class="h">0</span> <span style="font-size:56px;color:#5A6B70">/ 9</span></div><div class="pp-text cap">인칭·화계 효과 검정 중 사람 분포에<br>유의하게 가까워진 것 (Holm 보정)</div></div>
+</div>
+
+<!-- 왼쪽 단 -->
+<div class="col" id="colL">
+  <div class="pp-box card">
+    
+  <div class="sec-head">
+    <div class="pp-box num"></div>
+    <div class="pp-text numtxt">01</div>
+    <div class="pp-text sec-title">왜, 무엇을 물었나</div>
+  </div>
+    <div class="pp-text body"><b class="ink">실리콘 샘플링</b>은 LLM에 인구집단 페르소나를 주고 설문에 답하게 해 여론을 추정하는 방법이다. 싸고 빠르지만, 한국어·한국 사회에서도 믿을 수 있는지는 검증이 드물다.</div>
+    <div class="qrow"><div class="pp-text qk">Q1</div><div class="pp-text qt">LLM의 응답 분포는 실제 한국인 분포에 얼마나 가까운가?</div></div>
+    <div class="qrow"><div class="pp-text qk">Q2</div><div class="pp-text qt">성별·연령 집단 사이의 차이를 제대로 재현하는가?</div></div>
+    <div class="qrow"><div class="pp-text qk">Q3</div><div class="pp-text qt">추론 강도나 말투(인칭·화계)를 바꾸면 더 가까워지는가?</div></div>
+  </div>
+
+  <div class="pp-box card">
+    
+  <div class="sec-head">
+    <div class="pp-box num"></div>
+    <div class="pp-text numtxt">02</div>
+    <div class="pp-text sec-title">어떻게 쟀나</div>
+  </div>
+    <div class="flow">
+      <div class="pp-box step">
+  <div class="pp-box icc" style="width:68px;height:68px;background:#13343B"><div class="pp-img" style="width:38px;height:38px"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" color="#fff" style="color:#fff" height="38" width="38" xmlns="http://www.w3.org/2000/svg"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></svg></div></div><div class="pp-text stn">STEP 1</div><div class="pp-text stt">KGSS 2023<br>246문항</div><div class="pp-text std">실제 한국인 응답 분포(FINALWT 가중)를 정답으로</div></div>
+      <div class="pp-box step">
+  <div class="pp-box icc" style="width:68px;height:68px;background:#13343B"><div class="pp-img" style="width:38px;height:38px"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" color="#fff" style="color:#fff" height="38" width="38" xmlns="http://www.w3.org/2000/svg"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div></div><div class="pp-text stn">STEP 2</div><div class="pp-text stt">LLM 3종 ×<br>페르소나 3단계</div><div class="pp-text std">페르소나 없음 · 한국 성인 · 성별×연령 10셀</div></div>
+      <div class="pp-box step">
+  <div class="pp-box icc" style="width:68px;height:68px;background:#13343B"><div class="pp-img" style="width:38px;height:38px"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" color="#fff" style="color:#fff" height="38" width="38" xmlns="http://www.w3.org/2000/svg"><path d="m17 2 4 4-4 4"></path><path d="M3 11v-1a4 4 0 0 1 4-4h14"></path><path d="m7 22-4-4 4-4"></path><path d="M21 13v1a4 4 0 0 1-4 4H3"></path></svg></div></div><div class="pp-text stn">STEP 3</div><div class="pp-text stt">프롬프트당<br>50–100회</div><div class="pp-text std">같은 질문을 반복해 고른 보기의 비율로 분포를 만든다</div></div>
+      <div class="pp-box step">
+  <div class="pp-box icc" style="width:68px;height:68px;background:#E2553A"><div class="pp-img" style="width:38px;height:38px"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" color="#fff" style="color:#fff" height="38" width="38" xmlns="http://www.w3.org/2000/svg"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path><path d="M7 21h10"></path><path d="M12 3v18"></path><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"></path></svg></div></div><div class="pp-text stn">STEP 4</div><div class="pp-text stt">보정 후<br>거리 측정</div><div class="pp-text std">p ∝ (count+1)<sup>β</sup>로 쏠림을 편 뒤 TVD로 비교</div></div>
+    </div>
+    <div class="chips">
+      <div class="pp-box chip"><div class="pp-text ct">K-EXAONE 2.5 · DeepSeek V4.1 Flash · Claude Haiku 5.5</div></div>
+      <div class="pp-box chip"><div class="pp-text ct">calibration 148 · validation 49 · test 49문항</div></div>
+      <div class="pp-box chip"><div class="pp-text ct">사전등록 · Holm 보정 · 부트스트랩 2,000회</div></div>
+    </div>
+    <div class="pp-text note"><b style="color:#13343B">TVD</b>: 두 분포가 다른 정도. 0이면 같고 1이면 완전히 다르다. β는 calibration 문항에서만 정하고 validation·test에서 잰다.</div>
+  </div>
+
+  <div class="pp-box card">
+    
+  <div class="sec-head">
+    <div class="pp-box num"></div>
+    <div class="pp-text numtxt">03</div>
+    <div class="pp-text sec-title">가깝지 않고, 한쪽으로 쏠린다</div>
+  </div>
+    <div class="pp-text charth">보정 후 사람 분포와의 거리 <span class="u">TVD · 성별×연령 10셀 · 낮을수록 가까움</span></div>
+    <div class="pp-chart" data-chart='{"type":"bar","w":984,"h":200,"labelW":250,"labels":["K-EXAONE 2.5","DeepSeek V4.1","Haiku 5.5","균등분포(기준)"],"values":[0.222,0.257,0.284,0.372],"colors":["#1F8A80","#3F6C9E","#7D6BB0","#B9C4C6"],"max":0.42,"dec":3}' style="width:984px;height:200px"><svg width="984" height="200" viewBox="0 0 984 200" xmlns="http://www.w3.org/2000/svg"><text x="232" y="25" text-anchor="end" dominant-baseline="central" font-size="26" font-weight="600" fill="#17262A">K-EXAONE 2.5</text><rect x="250" y="9.5" width="324.54285714285714" height="31" rx="6" fill="#1F8A80"/><text x="588.5428571428572" y="25" dominant-baseline="central" font-size="26" font-weight="800" fill="#17262A">0.222</text><text x="232" y="75" text-anchor="end" dominant-baseline="central" font-size="26" font-weight="600" fill="#17262A">DeepSeek V4.1</text><rect x="250" y="59.5" width="375.70952380952383" height="31" rx="6" fill="#3F6C9E"/><text x="639.7095238095238" y="75" dominant-baseline="central" font-size="26" font-weight="800" fill="#17262A">0.257</text><text x="232" y="125" text-anchor="end" dominant-baseline="central" font-size="26" font-weight="600" fill="#17262A">Haiku 5.5</text><rect x="250" y="109.5" width="415.18095238095236" height="31" rx="6" fill="#7D6BB0"/><text x="679.1809523809524" y="125" dominant-baseline="central" font-size="26" font-weight="800" fill="#17262A">0.284</text><text x="232" y="175" text-anchor="end" dominant-baseline="central" font-size="26" font-weight="600" fill="#17262A">균등분포(기준)</text><rect x="250" y="159.5" width="543.8285714285714" height="31" rx="6" fill="#B9C4C6"/><text x="807.8285714285714" y="175" dominant-baseline="central" font-size="26" font-weight="800" fill="#17262A">0.372</text><line x1="250" y1="0" x2="250" y2="200" stroke="#5A6B70" stroke-width="2"/></svg></div>
+    <div class="pp-text charth">가장 많이 고른 보기의 평균 비율 <span class="u">한국 성인 페르소나</span></div>
+    <div class="pp-chart" data-chart='{"type":"bar","w":984,"h":200,"labelW":250,"labels":["사람(KGSS)","K-EXAONE 2.5","DeepSeek V4.1","Haiku 5.5"],"values":[0.52,0.81,0.82,0.93],"colors":["#E2553A","#1F8A80","#3F6C9E","#7D6BB0"],"max":1.08,"dec":2}' style="width:984px;height:200px"><svg width="984" height="200" viewBox="0 0 984 200" xmlns="http://www.w3.org/2000/svg"><text x="232" y="25" text-anchor="end" dominant-baseline="central" font-size="26" font-weight="600" fill="#17262A">사람(KGSS)</text><rect x="250" y="9.5" width="295.6296296296296" height="31" rx="6" fill="#E2553A"/><text x="559.6296296296296" y="25" dominant-baseline="central" font-size="26" font-weight="800" fill="#17262A">0.52</text><text x="232" y="75" text-anchor="end" dominant-baseline="central" font-size="26" font-weight="600" fill="#17262A">K-EXAONE 2.5</text><rect x="250" y="59.5" width="460.5" height="31" rx="6" fill="#1F8A80"/><text x="724.5" y="75" dominant-baseline="central" font-size="26" font-weight="800" fill="#17262A">0.81</text><text x="232" y="125" text-anchor="end" dominant-baseline="central" font-size="26" font-weight="600" fill="#17262A">DeepSeek V4.1</text><rect x="250" y="109.5" width="466.18518518518516" height="31" rx="6" fill="#3F6C9E"/><text x="730.1851851851852" y="125" dominant-baseline="central" font-size="26" font-weight="800" fill="#17262A">0.82</text><text x="232" y="175" text-anchor="end" dominant-baseline="central" font-size="26" font-weight="600" fill="#17262A">Haiku 5.5</text><rect x="250" y="159.5" width="528.7222222222222" height="31" rx="6" fill="#7D6BB0"/><text x="792.7222222222222" y="175" dominant-baseline="central" font-size="26" font-weight="800" fill="#17262A">0.93</text><line x1="250" y1="0" x2="250" y2="200" stroke="#5A6B70" stroke-width="2"/></svg></div>
+    <div class="pp-box take"><div class="pp-text t">한국어 특화 <b class="ink">K-EXAONE</b>이 두 모델보다 유의하게 가깝다(차이 −0.035, −0.062). 그래도 세 모델 모두 한 보기로 몰린다. 최빈 보기가 90%를 넘는 문항이 모델은 <b class="hl">49–76%</b>, 사람은 <b class="hl">2%</b>다.</div></div>
+    <div class="pp-text note">k=100, β 고정 후 test 49문항을 한 번 열어 잰 값</div>
+  </div>
+</div>
+
+<!-- 오른쪽 단 -->
+<div class="col" id="colR">
+  <div class="pp-box card">
+    
+  <div class="sec-head">
+    <div class="pp-box num"></div>
+    <div class="pp-text numtxt">04</div>
+    <div class="pp-text sec-title">집단 차이를 부풀린다</div>
+  </div>
+    <div class="pp-text charth">'한국 성인' → 성별×연령 셀로 바꿀 때 응답이 움직이는 폭 <span class="u">셀 이동 TVD</span></div>
+    <div class="pp-chart" data-chart='{"type":"bar","w":984,"h":200,"labelW":250,"labels":["사람(KGSS)","K-EXAONE 2.5","DeepSeek V4.1","Haiku 5.5"],"values":[0.075,0.124,0.209,0.246],"colors":["#E2553A","#1F8A80","#3F6C9E","#7D6BB0"],"max":0.29,"dec":3}' style="width:984px;height:200px"><svg width="984" height="200" viewBox="0 0 984 200" xmlns="http://www.w3.org/2000/svg"><text x="232" y="25" text-anchor="end" dominant-baseline="central" font-size="26" font-weight="600" fill="#17262A">사람(KGSS)</text><rect x="250" y="9.5" width="158.79310344827587" height="31" rx="6" fill="#E2553A"/><text x="422.7931034482759" y="25" dominant-baseline="central" font-size="26" font-weight="800" fill="#17262A">0.075</text><text x="232" y="75" text-anchor="end" dominant-baseline="central" font-size="26" font-weight="600" fill="#17262A">K-EXAONE 2.5</text><rect x="250" y="59.5" width="262.53793103448277" height="31" rx="6" fill="#1F8A80"/><text x="526.5379310344828" y="75" dominant-baseline="central" font-size="26" font-weight="800" fill="#17262A">0.124</text><text x="232" y="125" text-anchor="end" dominant-baseline="central" font-size="26" font-weight="600" fill="#17262A">DeepSeek V4.1</text><rect x="250" y="109.5" width="442.50344827586207" height="31" rx="6" fill="#3F6C9E"/><text x="706.5034482758621" y="125" dominant-baseline="central" font-size="26" font-weight="800" fill="#17262A">0.209</text><text x="232" y="175" text-anchor="end" dominant-baseline="central" font-size="26" font-weight="600" fill="#17262A">Haiku 5.5</text><rect x="250" y="159.5" width="520.8413793103448" height="31" rx="6" fill="#7D6BB0"/><text x="784.8413793103448" y="175" dominant-baseline="central" font-size="26" font-weight="800" fill="#17262A">0.246</text><line x1="250" y1="0" x2="250" y2="200" stroke="#5A6B70" stroke-width="2"/></svg></div>
+    <div class="pp-box take"><div class="pp-text t"><b class="ink">방향은 맞히지만 크기를 키운다.</b> DeepSeek Eco에서 셀 간 분산은 사람의 <b class="hl">3.4배</b>(표준편차로 약 1.8배)인데, 셀 편차의 방향이 사람과 맞는 정도(정렬)는 0.48이다.</div></div>
+  </div>
+
+  <div class="pp-box card">
+    
+  <div class="sec-head">
+    <div class="pp-box num"></div>
+    <div class="pp-text numtxt">05</div>
+    <div class="pp-text sec-title">추론을 켜면 더 과장한다</div>
+  </div>
+    <div class="pp-text sec-sub">DeepSeek V4.1 Flash Eco · 188문항 · k=50 · 추론 끔 → low → medium → high</div>
+    <div class="minis">
+      <div class="pp-box mini"><div class="pp-text mh">셀 간 분산비</div><div class="pp-text ms">모델 / 사람 · 과장</div><div class="pp-chart" data-chart='{"type":"line","w":300,"h":196,"labels":["끔","low","med","high"],"values":[3.38,4.51,5.16,5.07],"color":"#E2553A","min":2.4,"max":6.5,"dec":2}' style="width:300px;height:196px"><svg width="300" height="196" viewBox="0 0 300 196" xmlns="http://www.w3.org/2000/svg"><line x1="20" y1="146" x2="280" y2="146" stroke="#D5DEDD" stroke-width="2"/><polyline points="40,123.53170731707317 113.33333333333333,97.62439024390244 186.66666666666666,82.72195121951218 260,84.78536585365853" fill="none" stroke="#E2553A" stroke-width="6" stroke-linejoin="round"/><circle cx="40" cy="123.53170731707317" r="10" fill="#E2553A"/><text x="40" y="99.53170731707317" text-anchor="middle" font-size="24" font-weight="800" fill="#17262A">3.38</text><text x="40" y="184" text-anchor="middle" font-size="22" font-weight="600" fill="#5A6B70">끔</text><circle cx="113.33333333333333" cy="97.62439024390244" r="10" fill="#E2553A"/><text x="113.33333333333333" y="73.62439024390244" text-anchor="middle" font-size="24" font-weight="800" fill="#17262A">4.51</text><text x="113.33333333333333" y="184" text-anchor="middle" font-size="22" font-weight="600" fill="#5A6B70">low</text><circle cx="186.66666666666666" cy="82.72195121951218" r="10" fill="#E2553A"/><text x="186.66666666666666" y="58.72195121951218" text-anchor="middle" font-size="24" font-weight="800" fill="#17262A">5.16</text><text x="186.66666666666666" y="184" text-anchor="middle" font-size="22" font-weight="600" fill="#5A6B70">med</text><circle cx="260" cy="84.78536585365853" r="10" fill="#E2553A"/><text x="260" y="60.78536585365853" text-anchor="middle" font-size="24" font-weight="800" fill="#17262A">5.07</text><text x="260" y="184" text-anchor="middle" font-size="22" font-weight="600" fill="#5A6B70">high</text></svg></div></div>
+      <div class="pp-box mini"><div class="pp-text mh">셀 편차 정렬</div><div class="pp-text ms">사람과 같은 방향</div><div class="pp-chart" data-chart='{"type":"line","w":300,"h":196,"labels":["끔","low","med","high"],"values":[0.479,0.548,0.581,0.585],"color":"#1F8A80","min":0.42,"max":0.67,"dec":3}' style="width:300px;height:196px"><svg width="300" height="196" viewBox="0 0 300 196" xmlns="http://www.w3.org/2000/svg"><line x1="20" y1="146" x2="280" y2="146" stroke="#D5DEDD" stroke-width="2"/><polyline points="40,123.816 113.33333333333333,97.87199999999999 186.66666666666666,85.46400000000003 260,83.96000000000002" fill="none" stroke="#1F8A80" stroke-width="6" stroke-linejoin="round"/><circle cx="40" cy="123.816" r="10" fill="#1F8A80"/><text x="40" y="99.816" text-anchor="middle" font-size="24" font-weight="800" fill="#17262A">0.479</text><text x="40" y="184" text-anchor="middle" font-size="22" font-weight="600" fill="#5A6B70">끔</text><circle cx="113.33333333333333" cy="97.87199999999999" r="10" fill="#1F8A80"/><text x="113.33333333333333" y="73.87199999999999" text-anchor="middle" font-size="24" font-weight="800" fill="#17262A">0.548</text><text x="113.33333333333333" y="184" text-anchor="middle" font-size="22" font-weight="600" fill="#5A6B70">low</text><circle cx="186.66666666666666" cy="85.46400000000003" r="10" fill="#1F8A80"/><text x="186.66666666666666" y="61.46400000000003" text-anchor="middle" font-size="24" font-weight="800" fill="#17262A">0.581</text><text x="186.66666666666666" y="184" text-anchor="middle" font-size="22" font-weight="600" fill="#5A6B70">med</text><circle cx="260" cy="83.96000000000002" r="10" fill="#1F8A80"/><text x="260" y="59.96000000000002" text-anchor="middle" font-size="24" font-weight="800" fill="#17262A">0.585</text><text x="260" y="184" text-anchor="middle" font-size="22" font-weight="600" fill="#5A6B70">high</text></svg></div></div>
+      <div class="pp-box mini"><div class="pp-text mh">보정 후 TVD</div><div class="pp-text ms">사람과의 거리</div><div class="pp-chart" data-chart='{"type":"line","w":300,"h":196,"labels":["끔","low","med","high"],"values":[0.284,0.278,0.277,0.277],"color":"#13343B","min":0.2,"max":0.36,"dec":3}' style="width:300px;height:196px"><svg width="300" height="196" viewBox="0 0 300 196" xmlns="http://www.w3.org/2000/svg"><line x1="20" y1="146" x2="280" y2="146" stroke="#D5DEDD" stroke-width="2"/><polyline points="40,96.65000000000002 113.33333333333333,100.17499999999998 186.66666666666666,100.76249999999999 260,100.76249999999999" fill="none" stroke="#13343B" stroke-width="6" stroke-linejoin="round"/><circle cx="40" cy="96.65000000000002" r="10" fill="#13343B"/><text x="40" y="72.65000000000002" text-anchor="middle" font-size="24" font-weight="800" fill="#17262A">0.284</text><text x="40" y="184" text-anchor="middle" font-size="22" font-weight="600" fill="#5A6B70">끔</text><circle cx="113.33333333333333" cy="100.17499999999998" r="10" fill="#13343B"/><text x="113.33333333333333" y="76.17499999999998" text-anchor="middle" font-size="24" font-weight="800" fill="#17262A">0.278</text><text x="113.33333333333333" y="184" text-anchor="middle" font-size="22" font-weight="600" fill="#5A6B70">low</text><circle cx="186.66666666666666" cy="100.76249999999999" r="10" fill="#13343B"/><text x="186.66666666666666" y="76.76249999999999" text-anchor="middle" font-size="24" font-weight="800" fill="#17262A">0.277</text><text x="186.66666666666666" y="184" text-anchor="middle" font-size="22" font-weight="600" fill="#5A6B70">med</text><circle cx="260" cy="100.76249999999999" r="10" fill="#13343B"/><text x="260" y="76.76249999999999" text-anchor="middle" font-size="24" font-weight="800" fill="#17262A">0.277</text><text x="260" y="184" text-anchor="middle" font-size="22" font-weight="600" fill="#5A6B70">high</text></svg></div></div>
+    </div>
+    <div class="pp-box take"><div class="pp-text t">추론은 페르소나를 <b class="ink">더 강하게 연기</b>하게 만든다. 맞는 방향과 과장이 함께 커져 거리는 그대로다. low → high 분산비 +0.56(Holm p 0.042), 정렬 +0.037(p 0.008), 증가는 medium에서 멈춘다.</div></div>
+  </div>
+
+  <div class="pp-box card">
+    
+  <div class="sec-head">
+    <div class="pp-box num"></div>
+    <div class="pp-text numtxt">06</div>
+    <div class="pp-text sec-title">말투를 바꾸면 흔들리기만 한다</div>
+  </div>
+    <div class="pp-text sec-sub">인칭 요소별 보정 후 TVD 변화 · 한국 성인 · validation 49문항 · 95% 구간</div>
+    <div class="split" style="align-items:flex-start;gap:24px;margin-top:4px">
+      <div class="forest" style="position:relative;width:660px;height:492px"><div class="pp-box" style="position:absolute;left:428.5px;top:44px;width:3px;height:384px;background:#5A6B70"></div><div class="pp-box" style="position:absolute;left:297.75px;top:50px;width:2px;height:378px;background:#D5DEDD"></div><div class="pp-box" style="position:absolute;left:363.375px;top:50px;width:2px;height:378px;background:#D5DEDD"></div><div class="pp-box" style="position:absolute;left:494.625px;top:50px;width:2px;height:378px;background:#D5DEDD"></div><div class="pp-box" style="position:absolute;left:560.25px;top:50px;width:2px;height:378px;background:#D5DEDD"></div><div class="pp-text" style="position:absolute;left:238.75px;width:120px;top:436px;font-size:21px;color:#5A6B70;text-align:center;font-weight:600">−0.02</div><div class="pp-text" style="position:absolute;left:370px;width:120px;top:436px;font-size:21px;color:#5A6B70;text-align:center;font-weight:600">0</div><div class="pp-text" style="position:absolute;left:501.25px;width:120px;top:436px;font-size:21px;color:#5A6B70;text-align:center;font-weight:600">+0.02</div><div class="pp-box" style="position:absolute;left:220px;top:8px;width:22px;height:22px;border-radius:50%;background:#fff;border:5px solid #3F6C9E"></div><div class="pp-text" style="position:absolute;left:254px;top:2px;width:200px;font-size:23px;font-weight:700;color:#17262A">추론 끔</div><div class="pp-box" style="position:absolute;left:390px;top:8px;width:32px;height:32px;border-radius:50%;background:#E2553A"></div><div class="pp-text" style="position:absolute;left:434px;top:2px;width:200px;font-size:23px;font-weight:700;color:#17262A">추론 low</div><div class="pp-text" style="position:absolute;left:0;top:70px;width:206px;font-size:24px;font-weight:800;color:#17262A">페르소나 문장</div><div class="pp-text" style="position:absolute;left:0;top:106px;width:200px;font-size:20px;font-weight:500;color:#5A6B70">당신 → 이 사람</div><div class="pp-box" style="position:absolute;left:351.25px;top:83.5px;width:259.21875px;height:5px;border-radius:3px;background:#3F6C9E"></div><div class="pp-box" style="position:absolute;left:461.90625px;top:70px;width:22px;height:22px;border-radius:50%;background:#FFFFFF;border:5px solid #3F6C9E"></div><div class="pp-box" style="position:absolute;left:286.9375px;top:119.5px;width:213.28125px;height:5px;border-radius:3px;background:#E2553A"></div><div class="pp-box" style="position:absolute;left:382.5px;top:106px;width:32px;height:32px;border-radius:50%;background:#E2553A"></div><div class="pp-text" style="position:absolute;left:0;top:162px;width:206px;font-size:24px;font-weight:800;color:#17262A">문항 호칭</div><div class="pp-text" style="position:absolute;left:0;top:198px;width:200px;font-size:20px;font-weight:500;color:#5A6B70">귀하 → 이 사람</div><div class="pp-box" style="position:absolute;left:367.65625px;top:175.5px;width:211.96875px;height:5px;border-radius:3px;background:#3F6C9E"></div><div class="pp-box" style="position:absolute;left:454.03125px;top:162px;width:22px;height:22px;border-radius:50%;background:#FFFFFF;border:5px solid #3F6C9E"></div><div class="pp-box" style="position:absolute;left:376.1875px;top:211.5px;width:156.1875px;height:5px;border-radius:3px;background:#E2553A"></div><div class="pp-box" style="position:absolute;left:437.625px;top:198px;width:32px;height:32px;border-radius:50%;background:#E2553A"></div><div class="pp-text" style="position:absolute;left:0;top:254px;width:206px;font-size:24px;font-weight:800;color:#17262A">지시문</div><div class="pp-text" style="position:absolute;left:0;top:290px;width:200px;font-size:20px;font-weight:500;color:#5A6B70">+ '이 사람이 고를'</div><div class="pp-box" style="position:absolute;left:386.03125px;top:267.5px;width:97.12499999999994px;height:5px;border-radius:3px;background:#3F6C9E"></div><div class="pp-box" style="position:absolute;left:417.28125px;top:254px;width:22px;height:22px;border-radius:50%;background:#FFFFFF;border:5px solid #3F6C9E"></div><div class="pp-box" style="position:absolute;left:245.59375px;top:303.5px;width:166.03125px;height:5px;border-radius:3px;background:#E2553A"></div><div class="pp-box" style="position:absolute;left:315.5625px;top:290px;width:32px;height:32px;border-radius:50%;background:#E2553A"></div><div class="pp-text" style="position:absolute;left:0;top:346px;width:206px;font-size:24px;font-weight:800;color:#17262A">주체 높임 제거</div><div class="pp-text" style="position:absolute;left:0;top:382px;width:200px;font-size:20px;font-weight:500;color:#5A6B70">-시- 빼기</div><div class="pp-box" style="position:absolute;left:281.03125px;top:359.5px;width:168px;height:5px;border-radius:3px;background:#3F6C9E"></div><div class="pp-box" style="position:absolute;left:348.375px;top:346px;width:22px;height:22px;border-radius:50%;background:#FFFFFF;border:5px solid #3F6C9E"></div><div class="pp-box" style="position:absolute;left:315.15625px;top:395.5px;width:101.0625px;height:5px;border-radius:3px;background:#E2553A"></div><div class="pp-box" style="position:absolute;left:347.71875px;top:382px;width:32px;height:32px;border-radius:50%;background:#E2553A"></div><div class="pp-text" style="position:absolute;left:220px;top:470px;width:210px;font-size:19px;color:#1F8A80;font-weight:700">← 사람에 가까워짐</div><div class="pp-text" style="position:absolute;left:430px;top:470px;width:210px;font-size:19px;color:#5A6B70;font-weight:700;text-align:right">멀어짐 →</div></div>
+      <div style="width:316px;flex:none">
+        <div class="pp-box bigbox" style="width:316px"><div class="pp-text bn">6–32%</div><div class="pp-text bc">거리는 그대로인데 1등 보기가 바뀐 문항 (조건별, 추론 끔)</div></div>
+        <div class="pp-text body" style="font-size:22px;line-height:1.45;margin-top:16px">인칭·화계 9개 검정은 <b class="hl">모두 유의하지 않다.</b> 요소를 쪼개도 끔·low 공통으로 거리를 줄이는 요소는 없다. low의 주체 높임(p 0.044)은 글자까지 같은 문장에서도 같은 크기 차이가 나 효과로 보지 않는다.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 하단 -->
+<div id="bottom">
+  <div class="pp-box" id="concl">
+    
+  <div class="sec-head">
+    <div class="pp-box num"></div>
+    <div class="pp-text numtxt">07</div>
+    <div class="pp-text sec-title">결론</div>
+  </div>
+    <div class="cl"><div class="pp-text cln">1</div><div class="pp-text clt"><b>LLM 응답은 한국인 여론 분포를 대신할 수 없다.</b> 보정해도 거리가 크고 응답이 좁다.</div></div>
+    <div class="cl"><div class="pp-text cln">2</div><div class="pp-text clt"><b>집단 차이는 과장된다.</b> 그대로 쓰면 실제보다 갈라진 사회로 보인다.</div></div>
+    <div class="cl"><div class="pp-text cln">3</div><div class="pp-text clt"><b>추론과 말투는 재현도를 높이는 손잡이가 아니다.</b></div></div>
+    <div class="cl"><div class="pp-text cln">4</div><div class="pp-text clt"><b>차이를 만든 것은 모델이다.</b> 한국어 특화 모델만 유의하게 가까웠다.</div></div>
+  </div>
+  <div id="insight" class="pp-box">
+    
+  <div class="sec-head">
+    <div class="pp-box num"></div>
+    <div class="pp-text numtxt">08</div>
+    <div class="pp-text sec-title">무엇을 배웠나</div>
+  </div>
+    <div class="igrid">
+      <div class="pp-box ins">
+  <div class="pp-box icc" style="width:72px;height:72px;background:#FBE3DC"><div class="pp-img" style="width:40px;height:40px"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" color="#E2553A" style="color:#E2553A" height="40" width="40" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></div></div><div><div class="pp-text it">방향은 맞고 크기는 틀리다</div><div class="pp-text id">위험은 무작위 오차가 아니라 고정관념이 증폭되는 체계적 오차다</div></div></div>
+      <div class="pp-box ins">
+  <div class="pp-box icc" style="width:72px;height:72px;background:#FBE3DC"><div class="pp-img" style="width:40px;height:40px"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" color="#E2553A" style="color:#E2553A" height="40" width="40" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"></path><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"></path></svg></div></div><div><div class="pp-text it">더 생각해도 더 사람 같지 않다</div><div class="pp-text id">추론은 정확도가 아니라 페르소나 연기를 키운다</div></div></div>
+      <div class="pp-box ins">
+  <div class="pp-box icc" style="width:72px;height:72px;background:#FBE3DC"><div class="pp-img" style="width:40px;height:40px"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" color="#E2553A" style="color:#E2553A" height="40" width="40" xmlns="http://www.w3.org/2000/svg"><path d="m5 8 6 6"></path><path d="m4 14 6-6 2-3"></path><path d="M2 5h12"></path><path d="M7 2h1"></path><path d="m22 22-5-10-5 10"></path><path d="M14 18h6"></path></svg></div></div><div><div class="pp-text it">말투는 손잡이가 아니라 잡음원</div><div class="pp-text id">한국어 실리콘 샘플링은 프롬프트 문구를 고정하고 보고해야 한다</div></div></div>
+      <div class="pp-box ins">
+  <div class="pp-box icc" style="width:72px;height:72px;background:#FBE3DC"><div class="pp-img" style="width:40px;height:40px"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" color="#E2553A" style="color:#E2553A" height="40" width="40" xmlns="http://www.w3.org/2000/svg"><rect width="18" height="10" x="3" y="11" rx="2"></rect><circle cx="12" cy="5" r="2"></circle><path d="M12 7v4"></path><line x1="8" x2="8" y1="16" y2="16"></line><line x1="16" x2="16" y1="16" y2="16"></line></svg></div></div><div><div class="pp-text it">기법보다 모델</div><div class="pp-text id">학습 데이터가 더 중요할 수 있다. 다만 모델이 셋뿐이라 단정은 못 한다</div></div></div>
+      <div class="pp-box ins">
+  <div class="pp-box icc" style="width:72px;height:72px;background:#FBE3DC"><div class="pp-img" style="width:40px;height:40px"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" color="#E2553A" style="color:#E2553A" height="40" width="40" xmlns="http://www.w3.org/2000/svg"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg></div></div><div><div class="pp-text it">검증이 결론을 바꾼다</div><div class="pp-text id">'이 사람 문체가 낫다'와 '추론 효과 멈춤'은 엄격한 검정에서 뒤집혔다</div></div></div>
+      <div class="pp-box ins">
+  <div class="pp-box icc" style="width:72px;height:72px;background:#FBE3DC"><div class="pp-img" style="width:40px;height:40px"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" color="#E2553A" style="color:#E2553A" height="40" width="40" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg></div></div><div><div class="pp-text it">남은 질문: 왜 흔들리나</div><div class="pp-text id">평가 의식 · 사회적 바람직성 · 격식(해요체·해체)은 향후 연구로</div></div></div>
+    </div>
+  </div>
+</div>
+
+<div id="footer">
+  <div class="pp-text ft"><b>한계</b> 분산비·정렬은 DeepSeek에서만 측정했다. 3모델 비교는 test 49문항을 한 번 열어 쓴 결과이고, 이후 실험은 validation 49문항 기준이라 검정력이 제한된다. 주체 높임 결과는 해석을 미룬다.</div>
+  <div class="pp-text ft" style="margin-top:6px"><b>자료</b> 한국종합사회조사(KGSS) 2023 · Argyle et al. (2023), Out of One, Many: Using Language Models to Simulate Human Samples, <i>Political Analysis</i> · 모든 숫자는 레포의 실험 결과 파일(out/)에서 옮겼다.</div>
+</div>
+</body></html>
